@@ -1,7 +1,7 @@
 import random
 
 def print_signs():
-    signs = ['+', '-', '*', '/']
+    signs = ['♜', '⚓', '♆', '❀']
     selected_signs = []
 
     print("Press Enter to reveal a sign.")
@@ -13,10 +13,9 @@ def print_signs():
         print(f"Sign {i+1}: {sign}")
 
     if selected_signs[0] == selected_signs[1] == selected_signs[2]:
-        print("You win! All three signs are the same.")
-    elif len(set(selected_signs)) == 3:
-        print("You lose! All three signs are different.")
+        print(f"You win! You got {selected_signs[0]} {selected_signs[1]} {selected_signs[2]}")
     else:
-        print("Neither win nor lose. Try again.")
+        print(f"You lose! You got {selected_signs[0]} {selected_signs[1]} {selected_signs[2]}")
+
 
 print_signs()
